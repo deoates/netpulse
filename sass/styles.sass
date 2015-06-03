@@ -231,10 +231,30 @@ section.hero-runner
     position: absolute
     bottom: 0px
     background: rgba(18, 36, 55, .58)
-    height: 30px
+    height: 36px
     width: 100%
     text-align: center
-    padding-top: 8px
+    padding-top: 12px
+    cursor: pointer
+
+    .lines-container h4
+      &:before, &:after
+        content: ''
+        height: 15px
+        width: 14px
+        background: url('../img/down.png')
+        background-size: 100% 100%
+        position: static
+        margin: 0px
+        opacity: 1
+
+      &:before
+        float: left
+        margin-right: 20px
+
+      &:after
+        float: right
+        margin-left: 20px
 
   h3
     margin-top: 1.6rem
