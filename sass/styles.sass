@@ -134,6 +134,9 @@ h3, h4
   margin: 0px 2rem
   max-width: 100%
 
+  @media screen and (max-width: 680px)
+    margin: 0px 1rem
+
   h4
     font-size: 0.8rem
     color: #fff
@@ -356,6 +359,17 @@ section.blue
 
   .lines-container
     margin-left: 0px
+
+  @media screen and (max-width: 680px)
+    padding-top: 3rem
+    text-align: center
+
+    header
+      width: 100%
+
+    .lines-container
+      margin: 0px
+
 
   header h1
     color: #fff
@@ -824,7 +838,7 @@ section.timeline
     display: inline-block
     margin: 0
     padding: 0
-    padding-top: 220px
+    padding-top: 120px
     width: 100%
 
     @media screen and (max-width: 700px)
@@ -972,6 +986,12 @@ section.timeline
       @media screen and (max-width: 700px)
         float: none
 
+  li:last-child
+    &:before, &:after
+      display: none
+
+    
+
 
 section.customers
   position: relative
@@ -995,7 +1015,10 @@ section.help
   background: url('../img/help.jpg') top center no-repeat
   background-size: cover
   background-position-y: 150px
-  min-height: 700px
+  min-height: 750px
+
+  @media screen and (max-width: 550px)
+    min-height: 550px
 
   header
     width: 100%
