@@ -113,12 +113,12 @@ h2
 
 
 h3
-  font-size: 1.15rem
+  font-size: 1rem
   color: $dark
   line-height: 1.4
 
   @media screen and (max-width: 450px)
-    font-size: .95rem
+    font-size: .9rem
 
 h3, h4
   letter-spacing: 0.063rem
@@ -233,8 +233,8 @@ section.hero-runner
 
 
   @media screen and (max-width: 930px)
-    h2
-      padding-right: 24%
+    h2, h3
+      padding-right: 26%
       br
         display: none
 
@@ -312,7 +312,7 @@ section.locker
     min-height: 500px
 
   @media screen and (max-width: 570px)
-    background-position-y: -175px
+    background-position-y: -180px
     min-height: 350px
     padding-bottom: 2rem
 
@@ -330,7 +330,6 @@ section.locker
       margin-top: 100px
 
     @media screen and (max-width: 570px)
-      margin-top: 75px
       padding: 0px 24%
 
 
@@ -445,29 +444,26 @@ section.formula
 /* FEATURES SECTION */
 
 section.features
-  @include pie-clearfix
-  background: #fff
   position: relative
-  height: 650px
   padding: 0px
   max-width: 100%
 
-  @media screen and (max-width: 1200px)
-    height: auto
-
   &[data-section="engage"] .iphone
-    left: 50%
+    margin-left: 0px
 
   &[data-section="sell"] .iphone
-    left: 55%
-    @media screen and (max-width: 1200px)
+    margin-left: 60px
+
+    @media screen and (max-width: 1000px)
+      margin-left: 0px
       margin-top: 60px
 
   &[data-section="delight"] .iphone
-    left: 60%
-    @media screen and (max-width: 1200px)
-      margin-top: 120px
+    margin-left: 120px
 
+    @media screen and (max-width: 1000px)
+      margin-left: 0px
+      margin-top: 120px
   
   .iphone
     @include transition(all .3s)
@@ -476,10 +472,13 @@ section.features
     height: 659px
     background: url('../img/iphone-feature-section.png') no-repeat
     background-size: 100% 100%
-    top: -90px
-    left: 50%
-    margin-left: -600px
     z-index: 100
+    top: -90px
+    left: 4%
+      
+    @media screen and (max-width: 1000px)
+      right: 4%
+      left: initial
 
     a
       position: absolute
@@ -518,16 +517,6 @@ section.features
         a
           display: block
 
-    @media screen and (min-width: 960px) and (max-width: 1200px)
-      left: initial!important
-      right: 4%!important
-      margin-left: 0px!important
-
-    @media screen and (min-width: 740px) and (max-width: 960px)
-      left: initial!important
-      right: -36px!important
-      margin-left: 0px!important
-
     &:after
       position: absolute
       content: ''
@@ -538,7 +527,7 @@ section.features
       left: 33px
       z-index: 101
 
-      @media screen and (max-width: 740px)
+      @media screen and (max-width: 1000px)
         display: none
 
     img
@@ -556,46 +545,31 @@ section.features
         opacity: 1
 
     &.visible img
-      @media screen and (max-width: 740px)
+      @media screen and (max-width: 1000px)
         left: 50%
         margin-left: -135px
         top: 50%
         margin-top: -240.5px
 
   section
-    @include box-sizing(border-box)
-    @include transition(all .3s)
     @include pie-clearfix
-    height: 100%
-    float: left
-    overflow: hidden
+    @include transition(all .3s)
     position: relative
-    padding: 0
+    height: 100%
+    overflow: hidden
+    float: left
     width: 5%
+    text-align: center
+    padding: 0
+    padding-top: 4rem
 
-    @media screen and (max-width: 1200px)
+    @media screen and (max-width: 1000px)
       width: 100%
       clear: both
+      float: none
       height: 60px
-      padding: 0.7rem 4%
-
-
-    /* colors */
-
-    &.engage
-      background: $orange-bg
-      header h1, ul li h1
-        color: $orange
-
-    &.sell
-      background: $green-bg
-      header h1, ul li h1
-        color: $green
-
-    &.delight
-      background: $blue-bg
-      header h1, ul li h1
-        color: $blue
+      padding: 10px 3rem
+      text-align: left
 
     a.trigger
       display: block
@@ -604,79 +578,81 @@ section.features
       width: 100%
       height: 100%
       z-index: 90
+      top: 0px
+      left: 0px
+
+    > h1
+      @include transition(font-size .5s)
+
+      @media screen and (min-width: 1000px)
+        @include transform(rotate(90deg))
+        
+      @media screen and (max-width: 1000px)
+        margin: 0px
+        font-size: 1.6rem
+        display: inline
+        position: relative
+        top: -19px
+
 
     img.section-icon
-      position: absolute
-      top: 80px
-      right: -100px
-
-    img.small-section-icon
-      position: absolute
-      top: 80px
-      left: 50%
-      margin-left: -25px
-
-      @media screen and (max-width: 1200px)
-        position: static
-        margin-left: 0px
-        float: left
-
-    h2, ul, img.section-icon
-      @include transition(all .2s)
-      opacity: 0
-
-    header
-      text-align: left
       @include transition(all .3s)
-      @include transform(rotate(90deg))
-      position: absolute
-      left: 26%
-      top: 215px
-      width: 200px
+      width: 38px
+      height: auto
+      float: none
+      height: auto
+      margin-bottom: 10px
 
-      @media screen and (max-width: 1200px)
-        @include transform(rotate(0deg))
-        width: 100%!important
-        position: absolute
-        left: 80px
-        top: 20px
-
-
-      h1
-        margin: 0
-        font-size: 1.3rem
+      @media screen and (max-width: 1000px)
+        float: none
+        margin-right: 10px
 
     .section-content
-      position: absolute
-      left: 50%
-      margin-left: -150px
+      display: none
 
-      @media screen and (max-width: 1200px)
-        position: static
-        margin: 0px 5%
-        margin-right: 40%
+      span.feature-helper
+        @include DINBold
 
-        @media screen and (max-width: 740px)
-          margin: 0px 5%
+      h2
+        margin-bottom: 40px
 
       h2, p
         @include DINBold
         color: #fff
         font-size: 1.375rem
 
-        @media screen and (max-width: 930px)
-          font-size: 1.1rem
+        @media screen and (max-width: 1000px)
+          font-size: 1.2rem
+
+        @media screen and (max-width: 1100px)
+          br
+            display: none
+
+      p
+        font-size: 1.063rem
+        margin-top: 6px
+
+        &.helper:before
+          content: ''
+          display: block
+          background: url('../img/cursor-icon.png')
+          background-size: 100% 100%
+          height: 19px
+          width: 12px
+          margin-right: 6px
+          display: inline-block
+          position: relative
+          top: 2px
+        
 
       ul
-        margin: 50px 0 0
+        margin: 24px 0 0
         padding: 0
 
         li
           list-style: none
           margin-bottom: 24px
           width: 100%
-          @media screen and (max-width: 740px)
-            margin-bottom: 18px
 
         li a
           @include transition(all .2s)
@@ -686,14 +662,17 @@ section.features
           box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.0)
           border-radius: 7px
           text-decoration: none
-          padding: 18px 15px
-          padding-top: 0px
-          padding-bottom: 0px
+          padding: 0px 15px
           cursor: pointer
 
+
           @media screen and (max-width: 740px)
-            padding: 16px 12px
-            border: 2px solid #FFFFFF
+            width: 100%
+            border: 2px solid #fff
+            padding: 18px 15px
+
+            &:active
+              @include transform(scale(1.1))
 
           h1, p
             margin: 0
@@ -701,68 +680,87 @@ section.features
           h1
             font-size: 1.313rem
             text-transform: uppercase
-            @media screen and (max-width: 930px)
-              font-size: 1.1rem
 
-          p
-            font-size: 1.063rem
-            margin-top: 6px
-        
+            @media screen and (max-width: 1000px)
+              font-size: 1.2rem
+
         li.active a
           padding: 18px 15px
           border: 2px solid #FFFFFF
           box-shadow: 0px 2px 8px 0px rgba(0,0,0,.15)
 
-          @media screen and (max-width: 800px)
+          @media screen and (max-width: 1000px)
             box-shadow: none
-
 
 
   section.open 
     width: 90%
-    padding: 65px 0
     text-align: left
+    padding: 4rem
 
-    @media screen and (max-width: 1200px)
+    @media screen and (min-width: 1000px)
+      padding-left: calc(5% + 360px)
+
+    @media screen and (max-width: 1000px)
       width: 100%
+      padding: 4rem 3rem
+      padding-right: calc(5% + 360px)
       height: auto
-      min-height: 500px
-      padding: 2rem 0
 
+    @media screen and (max-width: 740px)
+      padding: 4rem 3rem 2rem
+      text-align: center
+
+    > h1
+      @include transform(rotate(0deg))
+      position: static
+      margin: 0 0 1rem
+      font-size: 5rem
+      color: #fff
+
+      @media screen and (max-width: 1000px)
+        font-size: 3.5rem
+
+      @media screen and (max-width: 740px)
+        display: block
+        position: static
+    
     a.trigger
       display: none
 
+    .section-content  
+      display: block
+
     img.section-icon
-      @include transition-delay(.3s)
-      opacity: 1
-      right: 70px
-
+      width: 92px
+      float: right
       @media screen and (max-width: 1200px)
-        opacity: 0
-        right: -100px
+        width: 70px
+      @media screen and (max-width: 1050px)
+        width: 54px
+        float: left
+        position: relative
+        top: 2px
+      @media screen and (max-width: 740px)
+        width: 92px
+        float: none
 
-    img.small-section-icon
-      @include transition(none)
-      display: none
+      
 
-    header
-      @include transform(rotate(0deg))
-      position: static
-      width: auto
-      margin: 0
+  section.engage
+    background: $orange-bg
+    h1
+      color: $orange
 
-      h1
-        font-size: 5.750em
-        color: #fff!important
+  section.sell
+    background: $green-bg
+    h1
+      color: $green
 
-        @media screen and (max-width: 930px)
-          font-size: 4rem
-        @media screen and (max-width: 570px)
-          font-size: 3rem
-
-    h2, ul
-      opacity: 1
-
+  section.delight
+    background: $blue-bg
+    h1
+      color: $blue
 
 section.timeline
   text-align: center
@@ -1192,6 +1190,5 @@ footer
   padding: 2rem 0
   background: #272A2D
   min-height: 400px
-
 
     
