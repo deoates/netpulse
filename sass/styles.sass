@@ -410,9 +410,10 @@ section.formula
   background-color: rgb(255,255,255)
   @include filter-gradient(#ffffff, #ebf4f7, vertical)
   @include background-image(linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(235,244,247,1) 100%))
-  padding-bottom: 8rem
   padding: 5rem 0 8rem
 
+  @media screen and (max-width: 740px)
+    padding: 3rem 0 2rem
       
 
   header h1
