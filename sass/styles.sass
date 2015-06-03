@@ -1,0 +1,1186 @@
+@import compass
+@import normalize
+
+@font-face
+  font-family: 'DINBold'
+  src: url('../font/din-bold-webfont.eot')
+  src: url('../font/din-bold-webfont.eot?#iefix') format("embedded-opentype"), url('../font/din-bold-webfont.woff') format("woff"), url('../font/din-bold-webfont.ttf') format("truetype"), url('font/din-bold-webfont.svg#DINBold') format("svg")
+  font-weight: normal
+  font-style: normal
+
+@mixin DINBold
+  font-family: 'DINBold', Helvetica, Arial, sans-serif
+
+
+@font-face
+  font-family: 'DINMedium'
+  src: url('../font/din-medium-webfont.eot')
+  src: url('../font/din-medium-webfont.eot?#iefix') format("embedded-opentype"), url('../font/din-medium-webfont.woff') format("woff"), url('../font/din-medium-webfont.ttf') format("truetype"), url('font/din-medium-webfont.svg#DINLight') format("svg")
+  font-weight: normal
+  font-style: normal
+
+@mixin DINMedium
+  font-family: 'DINMedium', Helvetica, Arial, sans-serif
+
+
+@font-face
+  font-family: 'DINRegular'
+  src: url('../font/din-regular-webfont.eot')
+  src: url('../font/din-regular-webfont.eot?#iefix') format("embedded-opentype"), url('../font/din-regular-webfont.woff') format("woff"), url('../font/din-regular-webfont.ttf') format("truetype"), url('font/din-regular-webfont.svg#DINRegular') format("svg")
+  font-weight: normal
+  font-style: normal
+
+@mixin DINRegular
+  font-family: 'DINRegular', Helvetica, Arial, sans-serif
+
+
+$dark: #33383D
+$blue-bg: #63D1E6
+$blue: #0695B1
+$green-bg: #A4E658
+$green: #609A1D
+$orange-bg: #FFD462
+$orange: #F69300
+
+
+html, body
+  -webkit-font-smoothing: antialiased
+
+$dark: #33383D
+$blue-bg: #63D1E6
+$blue: #0695B1
+$green-bg: #A4E658
+$green: #609A1D
+$orange-bg: #FFD462
+$orange: #F69300
+
+
+html, body
+  -webkit-font-smoothing: antialiased
+
+*
+  @include box-sizing(border-box)
+
+body
+  background: #fff
+
+
+h1, h3, h4
+  @include DINBold
+  text-transform: uppercase
+
+header
+  display: inline-block
+
+header h1
+  font-size: 5.750rem
+  text-transform: uppercase
+  color: $dark
+  margin-bottom: 4%
+
+  @media screen and (max-width: 930px)
+    font-size: 4rem
+  @media screen and (max-width: 570px)
+    font-size: 3rem
+
+
+.restrict
+  max-width: 1200px
+  padding: 0px 25px
+  width: 100%
+  margin: auto auto
+
+
+span.blue
+  color: $blue-bg
+
+
+h2
+  @include DINRegular
+  font-size: 1.250rem
+  font-weight: normal
+  line-height: 1.4
+  color: #575F65
+
+  @media screen and (max-width: 930px)
+    font-size: 1.1rem
+
+  @media screen and (max-width: 570px)
+    br
+      display: none
+
+
+h3
+  font-size: 1.15rem
+  color: $dark
+  line-height: 1.4
+
+h3, h4
+  letter-spacing: 0.063rem
+
+
+/* container class for above H4 with line extending from either side */
+.lines-container
+  @include box-sizing(border-box)
+  overflow: hidden
+  margin: 0px 2rem
+  max-width: 100%
+
+  h4
+    font-size: 0.8rem
+    color: #fff
+    letter-spacing: 0.219rem
+    display: inline-block
+    margin: auto auto
+    position: relative
+    opacity: .75
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      background: #fff
+      width: 2000px
+      height: 1px
+      top: 7px
+      opacity: .6
+
+    &:before
+      left: 100%
+      margin-left: 1rem
+
+    &:after
+      right: 100%
+      margin-right: 1rem
+
+
+  &.light-bg
+    margin: 0px 
+
+    h4
+      color: #A1AAAD
+      opacity: 1
+
+      &:before, &:after
+        background: #C3CCD0
+        opacity: .75
+    
+
+.three-col
+
+  &.fixed
+    position: absolute
+    width: 100%
+    top: 0px
+
+  .col
+    min-height: 4px
+    width: 33.33%
+    float: left
+
+    &.blue
+      background: $blue-bg
+    &.green
+      background: $green-bg
+    &.orange
+      background: $orange-bg
+    
+
+section
+  @include pie-clearfix
+  padding: 3rem 0px 2rem
+  width: 100%
+
+/* HERO RUNNER SECTION */
+
+section.hero-runner
+  height: 100vh
+  max-height: 100vh
+  min-height: 600px
+  position: relative
+  overflow: hidden
+  padding-top: 2rem
+
+  .runner
+    position: absolute
+    z-index: -1
+    bottom: 0px
+    right: 50%
+    margin-right: -850px
+
+    @media screen and (max-width: 570px)
+      margin-right: -800px
+
+  .dark-separator
+    position: absolute
+    bottom: 0px
+    background: rgba(18, 36, 55, .58)
+    height: 30px
+    width: 100%
+    text-align: center
+    padding-top: 8px
+
+
+  @media screen and (max-width: 930px)
+    h2
+      padding-right: 20%
+      br
+        display: none
+
+
+/* STATS SECTION */
+
+section.stats
+  @include pie-clearfix
+  padding: 0px
+
+  .three-col .col
+    min-height: 450px
+    text-align: center
+    padding: 6rem 0 2rem
+
+    @media screen and (max-width: 1150px)
+      width: 100%
+      clear: both
+      float: none
+      min-height: 0px
+      padding: 4rem 0 4rem
+
+
+    @media screen and (max-width: 1150px) and (min-width: 680px)
+      min-height: 200px
+  
+  img.stat
+    @media screen and (max-width: 1150px) and (min-width: 680px)
+      margin-right: 25px
+
+  .orange .stat-container
+    @media screen and (max-width: 1150px) and (min-width: 680px)
+      position: relative
+      top: -30px
+
+
+    p
+      margin-top: 20px
+
+  .stat-container
+    @include pie-clearfix
+    width: 340px
+    margin: 3.5rem auto 0
+    text-align: left
+    position: relative
+    display: inline-block
+
+    @media screen and (max-width: 1150px) and (min-width: 680px)
+      margin: 0px
+  
+    p
+      @include DINBold
+      color: #fff
+      font-size: 1.125em
+      line-height: 1.5
+      margin: 0 0 0 160px
+
+    img
+      position: absolute
+      right: 200px
+      
+
+/* LOCKER SECTION */
+
+section.locker
+  padding: 3rem 0px 5rem
+  background: #fff url('../img/locker.jpg') center center no-repeat
+  background-position-y: -1px
+  background-size: 1965px 709px
+  min-height: 709px
+  text-align: center
+
+  @media screen and (max-width: 930px)
+    background-position-y: -100px
+    min-height: 500px
+
+  @media screen and (max-width: 570px)
+    background-position-y: -175px
+    min-height: 350px
+    padding-bottom: 2rem
+
+  header h1
+    color: #fff
+
+  .lines-container
+    margin: 0 3rem
+
+  h2
+    margin-top: 200px
+    color: $dark
+
+    @media screen and (max-width: 930px)
+      margin-top: 100px
+
+    @media screen and (max-width: 570px)
+      margin-top: 75px
+      padding: 0px 24%
+
+
+  h3
+    margin-top: 50px
+    line-height: 1.5
+
+    @media screen and (max-width: 570px)
+      padding: 0px 15%
+      margin-top: 30px
+      br
+        display: none
+
+
+
+
+/* BLUE SECTION */
+
+section.blue
+  padding-top: 5rem
+  background: $blue-bg
+  position: relative
+  overflow: hidden
+
+  .lines-container
+    margin-left: 0px
+
+  header h1
+    color: #fff
+    margin: .5em 0
+
+    span.blue
+      color: $blue
+
+  img.blue-iphone
+    position: absolute
+    right: 50%
+    margin-right: -540px
+    bottom: 0px
+
+    @media screen and (max-width: 1050px)
+      margin-right: 0px
+      right: -227px
+
+    @media screen and (max-width: 930px)
+      bottom: -80px
+
+    @media screen and (max-width: 680px)
+      position: static
+      margin-bottom: -150px
+
+      
+
+/* FORMULA SECTION */
+  
+section.formula
+  @include pie-clearfix
+  text-align: center
+  background-color: rgb(255,255,255)
+  @include filter-gradient(#ffffff, #ebf4f7, vertical)
+  @include background-image(linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(235,244,247,1) 100%))
+  padding-bottom: 8rem
+  padding: 5rem 0 8rem
+
+      
+
+  header h1
+    margin-bottom: .4em
+
+  .three-col
+    margin-top: 60px
+
+    h1
+      text-transform: uppercase
+
+    .col
+      position: relative
+      &:after
+        content: '+'
+        font-family: 'DINRegular', Helvetica, Arial, sans-serif
+        font-size: 5rem
+        color: #99A5A9
+        position: absolute
+        top: 40%
+        left: -7%
+
+      &:first-child:after
+        display: none
+
+      @media screen and (max-width: 680px)
+        width: 100%
+        clear: both
+        float: none
+        margin-bottom: 3rem
+
+        &:after
+          display: none
+
+
+
+
+  h1.blue
+    color: $blue
+
+  h1.green
+    color: $green
+
+  h1.orange
+    color: $orange
+
+
+/* FEATURES SECTION */
+
+section.features
+  @include pie-clearfix
+  background: #fff
+  position: relative
+  height: 650px
+  padding: 0px
+  max-width: 100%
+
+  @media screen and (max-width: 1200px)
+    height: auto
+
+  &[data-section="engage"] .iphone
+    left: 50%
+
+  &[data-section="sell"] .iphone
+    left: 55%
+    @media screen and (max-width: 1200px)
+      margin-top: 60px
+
+  &[data-section="delight"] .iphone
+    left: 60%
+    @media screen and (max-width: 1200px)
+      margin-top: 120px
+
+  
+  .iphone
+    @include transition(all .3s)
+    position: absolute
+    width: 337px
+    height: 659px
+    background: url('../img/iphone-feature-section.png') no-repeat
+    background-size: 100% 100%
+    top: -90px
+    left: 50%
+    margin-left: -600px
+    z-index: 100
+
+    a
+      position: absolute
+      width: 42px
+      height: 42px
+      right: 0px
+      top: 0px
+      background: $orange url('../img/close.png') center center no-repeat
+      background-size: 24px 24px
+      z-index: 101
+      cursor: pointer
+      display: none
+
+      &:hover
+        background-color: $orange
+
+    @media screen and (max-width: 740px)
+      display: none
+      background: rgba(0,0,0,0)
+
+      &.visible
+        @include transition(all .5s)
+        margin-top: 0px!important
+        display: block
+        position: fixed
+        background: rgba(0,0,0,.85)
+        top: 0px
+        bottom: 0px
+        left: 0px!important
+        right: 0px
+        margin-left: 0px
+        width: 100%
+        height: 100%
+        overflow: scroll
+
+        a
+          display: block
+
+    @media screen and (min-width: 960px) and (max-width: 1200px)
+      left: initial!important
+      right: 4%!important
+      margin-left: 0px!important
+
+    @media screen and (min-width: 740px) and (max-width: 960px)
+      left: initial!important
+      right: -36px!important
+      margin-left: 0px!important
+
+    &:after
+      position: absolute
+      content: ''
+      width: 270px
+      height: 481px
+      background: #EBF4F7
+      top: 90px
+      left: 33px
+      z-index: 101
+
+      @media screen and (max-width: 740px)
+        display: none
+
+    img
+      @include transform(scale(.1))
+      @include transition(.2s)
+      position: absolute
+      top: 90px
+      left: 33px
+      opacity: 0
+
+
+      &.screenshot-active
+        @include transform(scale(1))
+        z-index: 111
+        opacity: 1
+
+    &.visible img
+      @media screen and (max-width: 740px)
+        left: 50%
+        margin-left: -135px
+        top: 50%
+        margin-top: -240.5px
+
+  section
+    @include box-sizing(border-box)
+    @include transition(all .3s)
+    @include pie-clearfix
+    height: 100%
+    float: left
+    overflow: hidden
+    position: relative
+    padding: 0
+    width: 5%
+
+    @media screen and (max-width: 1200px)
+      width: 100%
+      clear: both
+      height: 60px
+      padding: 0.7rem 4%
+
+
+    /* colors */
+
+    &.engage
+      background: $orange-bg
+      header h1, ul li h1
+        color: $orange
+
+    &.sell
+      background: $green-bg
+      header h1, ul li h1
+        color: $green
+
+    &.delight
+      background: $blue-bg
+      header h1, ul li h1
+        color: $blue
+
+    a.trigger
+      display: block
+      position: absolute
+      cursor: pointer
+      width: 100%
+      height: 100%
+      z-index: 90
+
+    img.section-icon
+      position: absolute
+      top: 80px
+      right: -100px
+
+    img.small-section-icon
+      position: absolute
+      top: 80px
+      left: 50%
+      margin-left: -25px
+
+      @media screen and (max-width: 1200px)
+        position: static
+        margin-left: 0px
+        float: left
+
+    h2, ul, img.section-icon
+      @include transition(all .2s)
+      opacity: 0
+
+    header
+      text-align: left
+      @include transition(all .3s)
+      @include transform(rotate(90deg))
+      position: absolute
+      left: 26%
+      top: 215px
+      width: 200px
+
+      @media screen and (max-width: 1200px)
+        @include transform(rotate(0deg))
+        width: 100%!important
+        position: absolute
+        left: 80px
+        top: 20px
+
+
+      h1
+        margin: 0
+        font-size: 1.3rem
+
+    .section-content
+      position: absolute
+      left: 50%
+      margin-left: -150px
+
+      @media screen and (max-width: 1200px)
+        position: static
+        margin: 0px 5%
+        margin-right: 40%
+
+        @media screen and (max-width: 740px)
+          margin: 0px 5%
+
+      h2, p
+        @include DINBold
+        color: #fff
+        font-size: 1.375rem
+
+        @media screen and (max-width: 930px)
+          font-size: 1.1rem
+
+      ul
+        margin: 50px 0 0
+        padding: 0
+
+        li
+          list-style: none
+          margin-bottom: 24px
+          width: 100%
+          @media screen and (max-width: 740px)
+            margin-bottom: 18px
+
+        li a
+          @include transition(all .2s)
+          display: inline-block
+          background: rgba(255,255,255,0.00)
+          border: 2px solid transparent
+          box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.0)
+          border-radius: 7px
+          text-decoration: none
+          padding: 18px 15px
+          padding-top: 0px
+          padding-bottom: 0px
+          cursor: pointer
+
+          @media screen and (max-width: 740px)
+            padding: 16px 12px
+            border: 2px solid #FFFFFF
+
+          h1, p
+            margin: 0
+
+          h1
+            font-size: 1.313rem
+            text-transform: uppercase
+            @media screen and (max-width: 930px)
+              font-size: 1.1rem
+
+          p
+            font-size: 1.063rem
+            margin-top: 6px
+        
+        li.active a
+          padding: 18px 15px
+          border: 2px solid #FFFFFF
+          box-shadow: 0px 2px 8px 0px rgba(0,0,0,.15)
+
+          @media screen and (max-width: 800px)
+            box-shadow: none
+
+
+
+  section.open 
+    width: 90%
+    padding: 65px 0
+    text-align: left
+
+    @media screen and (max-width: 1200px)
+      width: 100%
+      height: auto
+      min-height: 500px
+      padding: 2rem 0
+
+    a.trigger
+      display: none
+
+    img.section-icon
+      @include transition-delay(.3s)
+      opacity: 1
+      right: 70px
+
+      @media screen and (max-width: 1200px)
+        opacity: 0
+        right: -100px
+
+    img.small-section-icon
+      @include transition(none)
+      display: none
+
+    header
+      @include transform(rotate(0deg))
+      position: static
+      width: auto
+      margin: 0
+
+      h1
+        font-size: 5.750em
+        color: #fff!important
+
+        @media screen and (max-width: 930px)
+          font-size: 4rem
+        @media screen and (max-width: 570px)
+          font-size: 3rem
+
+    h2, ul
+      opacity: 1
+
+
+section.timeline
+  text-align: center
+  padding-bottom: 0px
+
+  @media screen and (max-width: 700px)
+    background: #EBF4F7
+
+  img.scroll-helper
+    display: inline-block
+    margin-top: 2rem
+    @media screen and (min-width: 700px)
+      display: none
+
+  .timeline-container
+    width: 100%
+    position: relative
+    margin-top: 75px
+    padding-bottom: 90px
+    overflow-y: hidden
+
+    @media screen and (max-width: 700px)
+      overflow-x: scroll
+      margin-top: 20px
+      padding-top: 15px
+      padding-bottom: 0px
+      background: #fff
+      @include box-shadow(0px -3px 0px rgba(0,0,0,.1))
+
+    &:before, &:after
+      content: ''
+      position: absolute
+      display: block
+      z-index: 0
+
+    &:before
+      background: #E6E6E6
+      width: 4px
+      top: 65px
+      bottom: 0px
+      left: 50%
+      margin-left: -2px
+      height: 100%
+
+      @media screen and (max-width: 700px)
+        display: none
+
+    &:after
+      width: 52px
+      height: 72px
+      top: 0px
+      left: 50%
+      margin-left: -26px
+      background: url('../img/rooster.png')
+      background-size: 100% 100%
+
+      @media screen and (max-width: 700px)
+        display: none
+
+  ul
+    display: inline-block
+    margin: 0
+    padding: 0
+    padding-top: 220px
+    width: 100%
+
+    @media screen and (max-width: 700px)
+      width: 10000px
+      padding-top: 45px
+
+    li
+      list-style: none
+      display: block
+      clear: both
+      width: 50%
+      position: relative
+
+      @media screen and (min-width:700px) and (max-width: 1180px)
+        margin-bottom: -15%
+
+      @media screen and (max-width: 700px)
+        float: left
+        clear: none
+        width: 270px
+        text-align: center
+        margin: 0px 40px!important
+        
+      &:before, &:after
+        content: ''
+        position: absolute
+        top: 50%
+
+        @media screen and (min-width:700px) and (max-width: 1180px)
+          top: 20%
+
+        @media screen and (max-width: 700px)
+          display: none
+
+      &:after
+        background: #E6E6E6
+        height: 1px
+        width: 50px
+        z-index: -1
+        margin-top: 3px
+
+      &:before
+        height: 16px
+        width: 16px
+        border-radius: 50%
+        background: #C4D0D3
+        border: 4px solid #fff
+        margin-top: -8px
+        z-index: 2
+        
+        
+  .timeline-text
+    max-width: 215px
+    display: inline-block
+    margin: 0 2rem
+
+    @media screen and (max-width: 1180px)
+      margin: 2rem 1.6rem
+
+    @media screen and (max-width: 700px)
+      text-align: left
+      margin: 2rem auto
+
+    span.time
+      @include DINBold
+      display: inline-block
+      clear: both
+      background: #FF6B4A
+      padding: .4rem .6rem .3rem
+      color: #fff
+      border-radius: 20px
+      font-size: 0.875em
+
+    h1
+      font-size: 1.375em
+      color: $dark
+
+    p
+      @include DINRegular
+      color: #555B5F
+      font-size: 1rem
+      line-height: 1.5
+
+
+  img.topheavy
+    position: relative
+    top: -45px
+
+    @media screen and (min-width:700px) and (max-width: 1180px)
+      top: 0px
+
+
+  li:nth-child(odd)
+    text-align: right
+    padding-right: 2.4rem
+
+    @media screen and (min-width:700px) and (max-width: 1180px)
+      padding-right: 3rem
+
+    @media screen and (max-width: 700px)
+      text-align: center
+      padding: 0
+
+    &:before
+      right: 0px
+      margin-right: -12px
+
+    &:after
+      right: 0px
+
+    img
+      float: right
+
+      @media screen and (max-width: 700px)
+        float: none
+
+      @media screen and (min-width:700px) and (max-width: 1180px)
+        margin-left: 100%
+
+  li:nth-child(even)
+    margin-left: 50%
+    padding-left: 2.4rem
+    text-align: left
+
+    @media screen and (min-width:700px) and (max-width: 1180px)
+      padding-left: 3rem
+
+    @media screen and (max-width: 700px)
+      text-align: center
+      margin-left: 0px
+      padding: 0
+
+    &:before
+      left: 0px
+      margin-left: -12px
+
+    &:after
+      left: 0px
+
+    img
+      float: left
+      @media screen and (min-width:700px) and (max-width: 1180px)
+        margin-right: 100%
+
+      @media screen and (max-width: 700px)
+        float: none
+
+
+section.customers
+  position: relative
+  text-align: center
+
+  h2
+    margin-bottom: 5rem
+
+  ul
+    margin: 0 0 4rem
+    padding: 0
+    display: inline-block
+
+    li
+      list-style: none
+      display: inline-block
+      padding: 20px
+
+section.help
+  text-align: center
+  background: url('../img/help.jpg') top center no-repeat
+  background-size: cover
+  background-position-y: 150px
+  min-height: 700px
+
+  header
+    width: 100%
+
+
+section.testimonials
+  text-align: center
+  position: relative
+  background-color: rgb(255,255,255)
+  @include filter-gradient(#ffffff, #ebf4f7, vertical)
+  @include background-image(linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(235,244,247,1) 100%))
+
+section.testimonial-content
+  padding: 0px
+
+  .three-col
+    @include pie-clearfix
+
+    .col
+      @include pie-clearfix
+      padding-left: 1px
+
+      &:first-child
+        padding-left: 0px
+
+      @media screen and (max-width: 1050px)
+        width: 100%
+        clear: both
+        float: none
+        position: relative
+        margin-bottom: 1px
+        
+
+  .club-image-container
+    max-width: 100%
+    max-height: 316px
+    height: auto
+    overflow: hidden
+
+    @media screen and (min-width: 650px) and (max-width: 1050px)
+      position: absolute
+      max-width: 30%
+      max-height: none
+      top: 0px
+      bottom: 0px
+      left: 0px
+
+    img
+      width: 100%
+      height: auto
+
+      @media screen and (min-width: 650px) and (max-width: 1050px)
+        height: 100%
+        width: auto
+
+
+  .club-details
+    padding: 10% 12%
+    border-right: 1px solid #DFDFDF
+    margin-right: -1px
+
+    @media screen and (min-width: 650px) and (max-width: 1050px)
+      padding: 5% 4%
+      width: 70%
+      float: right
+      border: 0px
+      border-bottom: 1px solid #dfdfdf
+
+    @media screen and (max-width: 650px) 
+      padding: 6%
+      border-right: 0px
+
+    p, span.club
+      font-family: 'DINRegular', Helvetica, Arial, sans-serif
+      color: lighten($dark, 15%)
+      line-height: 1.4
+
+    p
+      font-size: 1.1rem
+
+      @media screen and (max-width: 1050px)
+        font-size: 1rem
+
+    span.club
+      font-size: .9rem
+
+    .details-left
+      @media screen and (min-width: 650px) and (max-width: 1050px)
+        padding-right: 10px
+        width: 50%
+        float: left
+
+    .details-right
+      @media screen and (min-width: 650px) and (max-width: 1050px)
+        padding-left: 10px
+        width: 50%
+        float: right
+
+  h3
+    margin-top: 2rem
+    margin-bottom: 10px
+    font-size: 1rem
+    color: lighten($dark, 15%)
+
+  header
+    margin-top: 10px
+
+  header h1
+    font-size: 2.4rem
+    line-height: 1.2
+
+    @media screen and (max-width: 1050px)
+      font-size: 1.8rem
+
+section.action
+  position: relative
+  text-align: center
+  background-color: rgb(255,255,255)
+  @include filter-gradient(#ebf4f7, #ffffff, vertical)
+  @include background-image(linear-gradient(top, rgba(235,244,247,1) 0%, rgba(255,255,255,1) 100%))
+
+section.cta
+  padding: 0
+
+  .three-col
+    @include pie-clearfix
+    overflow: hidden
+
+  .col
+    padding: 4rem 4%
+    position: relative
+    text-align: center
+    height: auto
+    padding-bottom: 500px
+    margin-bottom: -440px
+
+    @media screen and (max-width: 790px)
+      width: 100%
+      clear: both
+      height: auto
+      margin-bottom: 0px
+      padding: 12%
+
+  .orange 
+    .cta
+      border: 3px solid $orange
+      background: darken($orange-bg, 10%)
+
+  .green
+    .cta
+      border: 3px solid $green
+      background: darken($green-bg, 10%)
+
+  .blue
+    .cta
+      border: 3px solid $blue
+      background: darken($blue-bg, 10%)
+
+  header
+    margin: 0px
+    display: block
+
+  header h1
+    color: #fff
+    font-size: 2.063em
+    line-height: 1.3
+
+    @media screen and (max-width: 1000px)
+      font-size: 1.6rem
+      margin: 2rem 0 .6rem
+
+  h2, .cta
+    @include DINBold
+    color: #fff
+
+
+  .cta
+    border-radius: 6px
+    padding: .9rem 2.5rem .7rem
+    font-size: 1.2rem
+    text-transform: uppercase
+    text-decoration: none
+    margin-top: 1rem
+    display: inline-block
+    
+
+  .icon
+    position: static
+
+
+footer
+  padding: 2rem 0
+  background: #272A2D
+  min-height: 400px
+
+
+    
