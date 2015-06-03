@@ -1245,8 +1245,79 @@ section.cta
 
 
 footer
-  padding: 2rem 0
+  @include pie-clearfix
+  padding: 4rem 2rem 4rem
   background: #272A2D
-  min-height: 400px
+  position: relative
+
+  img.footer-logo
+    margin-bottom: 40px
+
+  .contact-block
+    border-radius: 4px
+    background: rgba(0,0,0,.2)
+    padding: .7rem 1.3rem 0
+    padding-left: 50px
+    height: 37px
+    width: auto
+    display: inline-block
+    clear: both
+    margin-bottom: 12px
+    position: relative
+
+    img
+      position: absolute
+      top: 0px
+      left: 0px
+
+    a
+      text-decoration: none
+      @include DINMedium
+      color: #fff
+
+  p
+    margin: 2rem 0 4rem
+    color: rgba(255,255,255,.75)
+    line-height: 1.5
+    @include DINRegular
+
+  .contact-info
+    float: left
+    width: 400px
+
+  .site-map
+    margin: 0
+    padding: 0
+    float: left
+
+    h1
+      color: $blue-bg
+      font-size: 1.1rem
+      margin: 0 0 1.5rem
+
+  ul
+    padding: 0
+    margin: 0
+
+  li
+    list-style: none
+    margin: 12px 0px
+    color: rgba(255,255,255,.35)
+    @include DINRegular
+
+    a
+      @include DINBold
+      color: rgba(255,255,255,.6)
+      text-decoration: none
+      text-transform: uppercase
+      font-size: .9rem
+
+      &:hover
+        color: $blue-bg
+        
+
+    ul
+      padding-left: 20px
+    
 
     

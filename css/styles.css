@@ -1990,7 +1990,95 @@ section.cta .icon {
 
 /* line 1247, ../sass/styles.sass */
 footer {
-  padding: 2rem 0;
+  *zoom: 1;
+  padding: 4rem 2rem 4rem;
   background: #272A2D;
-  min-height: 400px;
+  position: relative;
+}
+/* line 38, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 1253, ../sass/styles.sass */
+footer img.footer-logo {
+  margin-bottom: 40px;
+}
+/* line 1256, ../sass/styles.sass */
+footer .contact-block {
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.7rem 1.3rem 0;
+  padding-left: 50px;
+  height: 37px;
+  width: auto;
+  display: inline-block;
+  clear: both;
+  margin-bottom: 12px;
+  position: relative;
+}
+/* line 1268, ../sass/styles.sass */
+footer .contact-block img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+/* line 1273, ../sass/styles.sass */
+footer .contact-block a {
+  text-decoration: none;
+  font-family: "DINMedium", Helvetica, Arial, sans-serif;
+  color: #fff;
+}
+/* line 1278, ../sass/styles.sass */
+footer p {
+  margin: 2rem 0 4rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+  font-family: "DINRegular", Helvetica, Arial, sans-serif;
+}
+/* line 1284, ../sass/styles.sass */
+footer .contact-info {
+  float: left;
+  width: 400px;
+}
+/* line 1288, ../sass/styles.sass */
+footer .site-map {
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+/* line 1293, ../sass/styles.sass */
+footer .site-map h1 {
+  color: #63D1E6;
+  font-size: 1.1rem;
+  margin: 0 0 1.5rem;
+}
+/* line 1298, ../sass/styles.sass */
+footer ul {
+  padding: 0;
+  margin: 0;
+}
+/* line 1302, ../sass/styles.sass */
+footer li {
+  list-style: none;
+  margin: 12px 0px;
+  color: rgba(255, 255, 255, 0.35);
+  font-family: "DINRegular", Helvetica, Arial, sans-serif;
+}
+/* line 1308, ../sass/styles.sass */
+footer li a {
+  font-family: "DINBold", Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+/* line 1315, ../sass/styles.sass */
+footer li a:hover {
+  color: #63D1E6;
+}
+/* line 1319, ../sass/styles.sass */
+footer li ul {
+  padding-left: 20px;
 }
