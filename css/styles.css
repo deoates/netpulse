@@ -654,7 +654,7 @@ section.locker {
 @media screen and (max-width: 570px) {
   /* line 302, ../sass/styles.sass */
   section.locker {
-    background-position-y: -150px;
+    background-position-y: -175px;
     min-height: 350px;
     padding-bottom: 2rem;
   }
