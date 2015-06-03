@@ -82,6 +82,8 @@ header h1
     font-size: 4rem
   @media screen and (max-width: 570px)
     font-size: 3rem
+  @media screen and (max-width: 450px)
+    font-size: 2.4rem
 
 
 .restrict
@@ -115,6 +117,12 @@ h3
   color: $dark
   line-height: 1.4
 
+  @media screen and (max-width: 450px)
+    font-size: .95rem
+
+h3, h4
+  letter-spacing: 0.063rem
+
 h3, h4
   letter-spacing: 0.063rem
 
@@ -134,6 +142,9 @@ h3, h4
     margin: auto auto
     position: relative
     opacity: .75
+
+    @media screen and (max-width: 450px)
+      font-size: .75rem
 
     &:before, &:after
       content: ''
@@ -301,7 +312,7 @@ section.locker
     min-height: 500px
 
   @media screen and (max-width: 570px)
-    background-position-y: -175px
+    background-position-y: -150px
     min-height: 350px
     padding-bottom: 2rem
 
