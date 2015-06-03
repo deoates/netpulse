@@ -33,7 +33,6 @@
 @mixin DINRegular
   font-family: 'DINRegular', Helvetica, Arial, sans-serif
 
-
 $dark: #33383D
 $blue-bg: #63D1E6
 $blue: #0695B1
@@ -68,6 +67,9 @@ body
 h1, h3, h4
   @include DINBold
   text-transform: uppercase
+
+strong
+  @include DINBold
 
 header
   display: inline-block
@@ -213,7 +215,7 @@ section.hero-runner
   min-height: 600px
   position: relative
   overflow: hidden
-  padding-top: 2rem
+  padding-top: 3rem
 
   .runner
     position: absolute
@@ -233,6 +235,9 @@ section.hero-runner
     width: 100%
     text-align: center
     padding-top: 8px
+
+  h3
+    margin-top: 1.6rem
 
 
   @media screen and (max-width: 930px)
@@ -1009,6 +1014,12 @@ section.customers
       list-style: none
       display: inline-block
       padding: 20px
+      @media screen and (max-width: 750px)
+        padding: 20px 0px
+
+      img
+        @media screen and (max-width: 750px)
+          @include transform(scale(.8))
 
 section.help
   text-align: center
@@ -1050,6 +1061,9 @@ section.testimonial-content
         float: none
         position: relative
         margin-bottom: 1px
+
+      @media screen and (max-width: 650px) 
+        text-align: center
         
 
   .club-image-container
@@ -1088,7 +1102,7 @@ section.testimonial-content
       border-bottom: 1px solid #dfdfdf
 
     @media screen and (max-width: 650px) 
-      padding: 6%
+      padding: 8%
       border-right: 0px
 
     p, span.club
