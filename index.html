@@ -68,10 +68,10 @@
 
     <script type="text/javascript">
       var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
+      var height = window.screen.height;
       if(iOS) {
         function iOSfix() {
           alert('fixingthatshit');
-          var height = $(window).height();
           $("section.hero-runner").css('max-height', height);
           $("section.hero-runner").css('height', height);
         }
