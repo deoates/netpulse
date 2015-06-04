@@ -22,18 +22,6 @@
     <meta property="og:description" content="Mobile apps that help clubs drive engagement, increase revenue and enhance the member experience.">
     <meta property="og:image" content="http://www.netpulse.com/share.jpg">
 
-    <script type="text/javascript">
-      var iOS = navigator.userAgent.match(/(iPod|iPhone|iPad)/);
-      if(iOS){
-          function iosVhHeightBug() {
-              var height = $(window).height();
-              $("header").css('min-height', height);
-              alert('fixingthatshit');
-          }
-          iosVhHeightBug();
-          $(window).bind('resize', iosVhHeightBug);
-      }  
-  </script>
 
   </head>
   <body>
@@ -608,6 +596,18 @@
       </div>
       </div>
     </footer>
+    <script type="text/javascript">
+      var iOS = navigator.userAgent.match(/(iPod|iPhone|iPad)/);
+      if(iOS){
+          function iosVhHeightBug() {
+              var height = $(window).height();
+              $("header").css('min-height', height);
+              alert('fixingthatshit');
+          }
+          iosVhHeightBug();
+          $(window).bind('resize', iosVhHeightBug);
+      }  
+  </script>
   <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="scripts.js"></script>
   <script async="" defer="true" src="https://api.olark.com/2.0/sites/6409-979-10-8842/visits?_callback=_olark_callback_cfd73a1b_acf2_4318_88c2_2f06f64c62ed&amp;_method=POST&amp;_data=%7B%22conversation_id%22%3A%22vMdaOynhmpaf3qes2M8TZ7uMGNEQH0ZA%22%2C%22cache%22%3A%220.23282530461438%22%7D"></script>
