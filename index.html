@@ -597,8 +597,7 @@
       </div>
     </footer>
     <script type="text/javascript">
-      var iOS = navigator.userAgent.match(/(iPod|iPhone|iPad)/);
-      alert(iOS);
+      var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
       if(iOS){
           function iosVhHeightBug() {
               var height = $(window).height();
