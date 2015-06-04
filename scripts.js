@@ -6,6 +6,11 @@
 
   $(function() {
     var closedWidth, fadeIn;
+    $('[data-href="scroll"]').click(function(e) {
+      return $('html, body').animate({
+        scrollTop: $(e.currentTarget).offset().top
+      }, 800);
+    });
     closedWidth = $("section.features > section:not(.open)").width();
     console.log(closedWidth);
     $('a.trigger').click(function(e) {

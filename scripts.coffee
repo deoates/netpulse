@@ -3,6 +3,11 @@ window.delay = (ms, func) ->
 
 $ ->
 
+  $('[data-href="scroll"]').click (e) ->
+    $('html, body').animate
+      scrollTop: $(e.currentTarget).offset().top
+    , 800
+
   closedWidth = $("section.features > section:not(.open)").width()
   console.log closedWidth
 

@@ -59,7 +59,6 @@ html, body
 
 *
   @include box-sizing(border-box)
-  outline: 1px solid red
 
 body
   background: #fff
@@ -228,6 +227,7 @@ section.hero-runner
       margin-right: -750px
 
   .dark-separator
+    @include transition(all .2s)
     position: absolute
     bottom: 0px
     background: rgba(18, 36, 55, .58)
@@ -236,6 +236,10 @@ section.hero-runner
     text-align: center
     padding-top: 12px
     cursor: pointer
+
+    &:hover
+      background: rgba(18, 36, 55, .7)
+      
 
     .lines-container h4
       &:before, &:after
@@ -320,6 +324,9 @@ section.stats
       font-size: 1.125em
       line-height: 1.5
       margin: 0 0 0 160px
+
+      @media screen and (max-width: 680px)
+        margin-left: 152px
 
     img
       position: absolute
@@ -611,6 +618,9 @@ section.features
       height: 60px
       padding: 10px 3rem
       text-align: left
+
+    @media screen and (max-width: 740px)
+      text-align: center
 
     a.trigger
       display: block
@@ -1035,11 +1045,19 @@ section.customers
     li
       list-style: none
       display: inline-block
-      padding: 20px
+      padding: 24px
       @media screen and (max-width: 750px)
         padding: 20px 0px
 
+      a:hover img
+        @include transform(scale(1.1))
+
+        @media screen and (max-width: 750px)
+          @include transform(scale(.9))
+
       img
+        @include transition(all .2s)
+
         @media screen and (max-width: 750px)
           @include transform(scale(.8))
 
@@ -1233,6 +1251,7 @@ section.cta
 
 
   .cta
+    @include transition(all .2s)
     border-radius: 6px
     padding: .9rem 2.5rem .7rem
     font-size: 1.2rem
@@ -1240,6 +1259,9 @@ section.cta
     text-decoration: none
     margin-top: 1rem
     display: inline-block
+
+    &:hover
+      @include transform(scale(1.1))
     
 
   .icon
