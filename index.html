@@ -22,6 +22,8 @@
     <meta property="og:description" content="Mobile apps that help clubs drive engagement, increase revenue and enhance the member experience.">
     <meta property="og:image" content="http://www.netpulse.com/share.jpg">
 
+    <script src="viewport-units-buggyfill.js"></script>
+    <script>window.viewportUnitsBuggyfill.init();</script>
 
   </head>
   <body>
@@ -65,20 +67,6 @@
       </div>
 
     </section><!-- hero-runner -->
-
-    <script type="text/javascript">
-      var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
-      var height = window.screen.height;
-      if(iOS) {
-        function iOSfix() {
-          alert('fixingthatshit');
-          $("section.hero-runner").css('max-height', height);
-          $("section.hero-runner").css('height', height);
-        }
-        iOSfix();
-        window.bind('resize', iOSfix());
-      }  
-    </script>
 
     <section class="stats">
 
