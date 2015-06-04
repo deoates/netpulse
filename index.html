@@ -598,10 +598,11 @@
     </footer>
     <script type="text/javascript">
       var iOS = navigator.userAgent.match(/(iPod|iPhone|iPad)/);
+      alert(iOS);
       if(iOS){
           function iosVhHeightBug() {
               var height = $(window).height();
-              $(".hero-runner").css('min-height', height);
+              $("section.hero-runner").css('max-height', height);
               alert('fixingthatshit');
           }
           iosVhHeightBug();
