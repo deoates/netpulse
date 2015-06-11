@@ -21,6 +21,7 @@
       $('section.features > section').each(function(i, el) {
         return $(el).removeClass('open');
       });
+      $('html, body').scrollTop($(e.currentTarget).offset().top);
       $section = $(e.currentTarget);
       $section.addClass('open');
       sectionName = $section.attr('data-section');

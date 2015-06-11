@@ -19,6 +19,8 @@ $ ->
     $('section.features > section').each (i, el) ->
       $(el).removeClass 'open'
 
+    $('html, body').scrollTop $(e.currentTarget).offset().top
+
     $section = $(e.currentTarget)
     $section.addClass 'open'
 
