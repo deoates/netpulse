@@ -87,7 +87,6 @@ header h1
   @media screen and (max-width: 450px)
     font-size: 2.4rem
 
-
 .restrict
   max-width: 1200px
   padding: 0px 25px
@@ -210,7 +209,7 @@ section
 
 section.hero-runner
   height: 100vh
-  max-height: 100vh
+  max-height: 710px
   min-height: 600px
   position: relative
   overflow: hidden
@@ -680,7 +679,7 @@ section.features
             display: none
 
       p
-        font-size: 1.063rem
+        font-size: 1.0rem
         margin-top: 6px
 
         &.helper:before
@@ -702,46 +701,62 @@ section.features
 
         li
           list-style: none
-          margin-bottom: 24px
+          margin-bottom: 20px
           width: 100%
 
         li a
           @include transition(all .2s)
           display: inline-block
           background: rgba(255,255,255,0.00)
-          border: 2px solid transparent
           box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.0)
+          padding: 15px 13px 13px
           border-radius: 7px
           text-decoration: none
-          padding: 0px 15px
           cursor: pointer
+          padding-left: 70px
+          position: relative
+
+          div
+            position: absolute
+            background-size: 120px 60px
+            background-position: -60px 0
+            left: 6px
+            top: 6px
+            width: 60px
+            height: 60px
+            overflow: hidden
 
 
           @media screen and (max-width: 740px)
             width: 100%
             border: 2px solid #fff
-            padding: 18px 15px
+            text-align: left
+
+            div
+              background-position: 0
 
             &:active
               @include transform(scale(1.1))
-
           h1, p
             margin: 0
 
           h1
-            font-size: 1.313rem
+            font-size: 1.2rem
             text-transform: uppercase
+            margin-bottom: 4px
 
             @media screen and (max-width: 1000px)
               font-size: 1.2rem
 
         li.active a
-          padding: 18px 15px
           border: 2px solid #FFFFFF
           box-shadow: 0px 2px 8px 0px rgba(0,0,0,.15)
 
-          @media screen and (max-width: 1000px)
-            box-shadow: none
+          div
+            background-position: 0px 0
+
+          @media screen and (max-width: 740px)
+            box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.0)!important 
 
 
   section.open 
@@ -800,16 +815,22 @@ section.features
 
   section.engage
     background: $orange-bg
+    li a
+      border: 2px solid darken($orange-bg, 20%)
     h1
       color: $orange
 
   section.sell
     background: $green-bg
+    li a
+      border: 2px solid darken($green-bg, 20%)
     h1
       color: $green
 
   section.delight
     background: $blue-bg
+    li a
+      border: 2px solid darken($blue-bg, 20%)
     h1
       color: $blue
 
