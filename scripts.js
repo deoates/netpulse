@@ -13,12 +13,15 @@
     });
     closedWidth = $("section.features > section:not(.open)").width();
     console.log(closedWidth);
-    $('a.trigger').click(function(e) {
+    $('section.features > section').click(function(e) {
       var $section, sectionName;
+      if ($(e.currentTarget).hasClass('open')) {
+        return false;
+      }
       $('section.features > section').each(function(i, el) {
         return $(el).removeClass('open');
       });
-      $section = $(e.currentTarget).parent();
+      $section = $(e.currentTarget);
       $section.addClass('open');
       sectionName = $section.attr('data-section');
       return $('section.features').attr('data-section', sectionName);

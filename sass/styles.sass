@@ -59,6 +59,7 @@ html, body
 
 *
   @include box-sizing(border-box)
+  outline: 1px solid red
 
 body
   background: #fff
@@ -312,9 +313,11 @@ section.stats
     margin: 3.5rem auto 0
     text-align: left
     position: relative
-    display: inline-block
+    display: block
+    clear: both
 
     @media screen and (max-width: 1150px) and (min-width: 680px)
+      display: inline-block
       margin: 0px
   
     p
@@ -610,6 +613,11 @@ section.features
     padding: 0
     padding-top: 4rem
 
+    &:not(.open):hover
+      cursor: pointer
+      @include transform(scale(1.03))
+      @include transition(all .2s)
+
     @media screen and (max-width: 1000px)
       width: 100%
       clear: both
@@ -716,6 +724,9 @@ section.features
           padding-left: 70px
           position: relative
 
+          &:hover
+            @include transform(scale(1.03))
+
           div
             position: absolute
             background-size: 120px 60px
@@ -815,6 +826,10 @@ section.features
 
   section.engage
     background: $orange-bg
+
+    &:not(.open):hover
+      background: darken($orange-bg, 8%)
+
     li a
       border: 2px solid darken($orange-bg, 20%)
     h1
@@ -822,6 +837,9 @@ section.features
 
   section.sell
     background: $green-bg
+    &:not(.open):hover
+      background: darken($green-bg, 8%)
+
     li a
       border: 2px solid darken($green-bg, 20%)
     h1
@@ -829,6 +847,9 @@ section.features
 
   section.delight
     background: $blue-bg
+    &:not(.open):hover
+      background: darken($blue-bg, 8%)
+
     li a
       border: 2px solid darken($blue-bg, 20%)
     h1

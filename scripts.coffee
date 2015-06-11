@@ -11,12 +11,15 @@ $ ->
   closedWidth = $("section.features > section:not(.open)").width()
   console.log closedWidth
 
-  $('a.trigger').click (e) ->
+  $('section.features > section').click (e) ->
+    
+    if $(e.currentTarget).hasClass('open')
+      return false
 
     $('section.features > section').each (i, el) ->
       $(el).removeClass 'open'
 
-    $section = $(e.currentTarget).parent()
+    $section = $(e.currentTarget)
     $section.addClass 'open'
 
     sectionName = $section.attr 'data-section'
