@@ -3,6 +3,14 @@ window.delay = (ms, func) ->
 
 $ ->
 
+  $('div.menu-link').click (e) ->
+    $(e.target).addClass('show')
+
+  $(document).bind 'mouseup touchend', (e) ->
+    container = $('div.menu-link')
+    if !container.is(e.target) and (container.has(e.target).length is 0)
+      container.removeClass('show')
+
   $('[data-href="scroll"]').click (e) ->
     $('html, body').animate
       scrollTop: $(e.currentTarget).offset().top

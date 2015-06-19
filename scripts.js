@@ -6,6 +6,16 @@
 
   $(function() {
     var closedWidth, fadeIn;
+    $('div.menu-link').click(function(e) {
+      return $(e.target).addClass('show');
+    });
+    $(document).bind('mouseup touchend', function(e) {
+      var container;
+      container = $('div.menu-link');
+      if (!container.is(e.target) && (container.has(e.target).length === 0)) {
+        return container.removeClass('show');
+      }
+    });
     $('[data-href="scroll"]').click(function(e) {
       return $('html, body').animate({
         scrollTop: $(e.currentTarget).offset().top
