@@ -174,18 +174,19 @@ nav.header
       &:after
         visibility: visible
 
-    &:hover, &:active
-      @media screen and (max-width: 1000px)
-        box-shadow: inset 3px 0px 0px rgba(0,0,0,.05)
-        &:after
-          opacity: 0
+    @media screen and (max-width: 1000px)
 
-        height: 400px
-        width: 245px
+      &:hover, &:active
+          box-shadow: inset 3px 0px 0px rgba(0,0,0,.05)
+          &:after
+            opacity: 0
 
-        ul
-          visibility: visible
-          opacity: 1
+          height: 400px
+          width: 245px
+
+          ul
+            visibility: visible
+            opacity: 1
 
 
   ul
